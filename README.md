@@ -36,17 +36,16 @@ The script queries the `/eth/v1/beacon/headers/head` endpoint to retrieve the `a
 ### Example Output
 Below is a successful audit run demonstrating perfect synchronization between the calculated global clock and the Beacon Node:
 
-```bash
+```ps
 PS C:\Users\OmiNafees\Downloads\eth-consensus-audit-demo> go run .\consensus_audit.go
-
 --- Ethereum Consensus Layer Heartbeat Audit ---
-Current Unix Time:    1772374815
-Expected Global Slot: 13795899
-Node Reported Slot:   13795899
-Latest State Root:    0x8e8045b25f842ca8d11f745fd3ee399ad0486bf26b8ed5418cdcaa22cd94c3e8
+Current Unix Time:    1772373048
+Expected Global Slot: 13795752
+Node Reported Slot:   13795751
+Latest State Root:    0x5689cc1581788f2a281caae171878429a9f1dcce3302fcabb36f9e3a970874cf
 
 --- Audit Summary ---
-[PASS] Node is perfectly synchronized with the global slot clock.
+[WARN] Node slot mismatch. This could indicate latency or a synchronization lag.
 ```
 
 ### Why This Matters for Protocol Testing
