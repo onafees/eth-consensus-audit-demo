@@ -46,6 +46,7 @@ Latest State Root:    0xfd523b0367917c7f47105b036a002cd662b51f26b5fad5cae7f89f63
 
 --- Audit Summary ---
 [WARN] Node slot mismatch. This could indicate latency or a synchronization lag.
+
 PS C:\Users\OmiNafees\Downloads\eth-consensus-audit-demo> go run .\consensus_audit.go
 --- Ethereum Consensus Layer Heartbeat Audit ---
 Current Unix Time:    1772377174
