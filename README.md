@@ -36,7 +36,7 @@ The script queries the `/eth/v1/beacon/headers/head` endpoint to retrieve the `a
 ### Example Output
 Below is a successful audit run demonstrating perfect synchronization between the calculated global clock and the Beacon Node:
 
-```ps
+```bash
 PS C:\Users\OmiNafees\Downloads\eth-consensus-audit-demo> go run .\consensus_audit.go
 --- Ethereum Consensus Layer Heartbeat Audit ---
 Current Unix Time:    1772373048
