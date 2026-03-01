@@ -11,6 +11,18 @@ In a distributed Proof-of-Stake system, clock synchronization and state consiste
 
 
 ### Methodology
+
+```
+       EPOCH (6.4 Minutes)
+
+|-------------------------------------------------------------------|
+| Slot 0 | Slot 1 | Slot 2 |  ...  | Slot 30 | Slot 31 | (32 Total) |
+|---|----|---|----|---|----|  ...  |----|----|----|----|------------|
+    |        |        |                    |         |
+ [Block]  [Empty]  [Block]              [Block]   [Block]
+ (12s)    (12s)    (12s)                (12s)     (12s)
+```
+
 The auditor calculates the "Expected Slot" ($S_{expected}$) using the following formula:
 
 $$S_{expected} = \lfloor \frac{T_{current} - T_{genesis}}{12} \rfloor$$
@@ -46,12 +58,12 @@ For a Protocol Tester, this script provides a foundation for detecting several c
 
 ### Usage
 1. Ensure Go 1.21+ is installed.
-1. Initialize the module: go mod init eth-consensus-audit
-1. Execute the auditor: go run consensus_audit.go
+1. Initialize the module: `go mod init eth-consensus-audit`
+1. Execute the auditor: `go run consensus_audit.go`
 
 ### Future Work: Scaling to a Fuzzing Harness
-* Multi-Client Consistency Check: Comparing state_root values across multiple RPC endpoints simultaneously.
-* Latency Benchmarking: Measuring the time delta between slot-start and head availability.
+* Multi-Client Consistency Check: Comparing `state_root` values across multiple RPC endpoints simultaneously.
+* Latency Benchmarking: Measuring the time delta between slot-start and `head` availability.
 * Integration Testing: Packaging this logic into a CI/CD pipeline for verifying local devnets during protocol upgrades.
 
 ### License
