@@ -34,7 +34,7 @@ Where:
 The script queries the `/eth/v1/beacon/headers/head` endpoint to retrieve the `actual_slot` and `state_root` currently recognized by the node.
 
 ### Example Output
-Below are two successful audit runs demonstrating first a lag, and then shortly after, perfect synchronization between the calculated global clock and the Beacon Node:
+Below are two successful audit runs demonstrating first a synchronization lag, and then shortly after, perfect synchronization between the calculated global clock and the Beacon Node:
 
 ```
 PS C:\Users\OmiNafees\Downloads\eth-consensus-audit-demo> go run .\consensus_audit.go
