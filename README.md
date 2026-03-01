@@ -68,5 +68,3 @@ For a Protocol Tester, this script provides a foundation for detecting several c
 
 ### License
 This project is licensed under the GPL v3 License.
-
-`![Ethereum Slot/Epoch Structure](diagram.png)`
